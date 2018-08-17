@@ -1,0 +1,55 @@
+// 导航条样式
+@import "constant.scss";
+@import "init.scss";
+.header{
+    width:100%;
+    height: $Nav_Height;
+    background: #3a3a3a;
+    position: fixed; //固定导航条在顶部
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 100;
+
+    .container{
+        z-index: 200;
+        width: $Page_Width;
+        height: 100%;
+        //background: yellow;
+        margin: 0 auto;
+        overflow: hidden;
+        .logo{
+            margin-top: 10px;
+            float: left;
+            height:48px;
+            width: 150px;
+            background-repeat: no-repeat;
+            background-image: url("https://www.bufanbiz.com/static/build/images/new-normal-logo.png");
+
+        }
+        // 导航条分类css
+        .top_catogery{
+            float: left;
+            ul{
+                margin-left: 40px;
+                li{
+                    margin-left: 40px;
+                    float: left;
+                    height: 61px;//
+
+                    a{
+                        font-size: 18px;
+                        color: #ffffff;
+                        line-height: $Nav_Height;
+                    }
+
+
+                }
+                .active{
+                    border-bottom: 3px solid $Theme_Color;
+                }
+            }
+        }
+
+    }
+}

@@ -1,0 +1,180 @@
+@import "constant.scss";
+@import "init.scss";
+@import "header.scss";
+@import "footer.scss";
+@import "sidebar.scss";
+body{
+  background: #f2f2f2;
+}
+.main {
+  width: 100%;
+  margin-top: $Nav_Height+20px;
+
+  .wrapper {
+    width: $Page_Width;
+    margin: 0 auto; //盒子居中
+    overflow: hidden; //如果父盒子下面的div全浮动。父盒子将获取不到高度
+    .news-wrapper {
+      $Banner_width: $MainBox;
+      $Banner_height: 202px;
+      float: left;
+      width: $Banner_width;
+      background: #ffffff;
+      padding: 20px;
+      box-sizing: border-box; // 加padding盒子宽度会增加，指定border-box不会怎加盒子宽度
+    }
+  }
+}
+.main {
+  .wrapper{
+    .news-wrapper{
+      position: relative;
+
+      .news-title{
+        font-size: 24px;
+        font-weight: normal;
+      }
+      .more-info{
+
+          overflow: hidden;
+          margin: 20px 0;
+          .info-group{
+            float: left;
+            span{
+              padding-right: 10px;
+              color: #878787;
+              font-size: 14px;
+            }
+            .category{
+              background: $Theme_Color;
+              padding:0 5px;
+              color: #f2f2f2;
+            }
+          }
+          .share-group{
+            overflow: hidden;
+            float: right;
+            i{
+              line-height: 25px;
+              float: left;
+              color: #878787;
+              font-size: 14px;
+            }
+            a{
+              float: left;
+              background: url("https://www.bufanbiz.com/static/build/images/share.png");
+              background-repeat: no-repeat;
+              background-size: 230%;
+              width: 25px;
+              height: 25px; // 设置背景图片时a标签指定高度和宽度
+              margin-left: 10px;
+
+            }
+
+            .weibo{
+              background-position: -32px 0;
+              &:hover.share-code{
+                display: block;
+              }
+
+            }
+            // 微信分享文章二维码
+            .share-code{
+              position: absolute;
+              overflow: hidden;
+              border: solid 1px #878787;
+              padding: 5px;
+              bottom: -80px;
+              right: 30px;
+              display: none;//
+              .share-image{
+                float: left;
+                width: 90px;
+                height: 90px;
+              }
+              p{
+                color: #878787;
+                padding-left: 10px;
+                float: left;
+                width: 130px;
+              }
+            }
+          }
+        }
+      .comment-group{
+        margin-top: 20px;
+        padding-top: 10px;
+        border-top: solid 1px #878787;
+        .title{
+          font-weight:400
+        }
+        .comment-textarea{
+          resize: none; //不能调整textarea的大小
+          margin: 10px 0;
+          width: 100%;//
+          padding: 10px;
+          box-sizing: border-box;
+          border-radius: 5px;
+          outline: none;
+          font-size: 14px;
+          color: #878787;
+
+        }
+        .nologin-textarea{
+           line-height: 8px;
+
+        }
+        .button-comment{
+          text-align: right;
+          button{
+            background: $Theme_Color;
+            border-style: none;
+            border-radius: 5px;
+            height: 30px;
+            color: white;
+            outline: none;
+            padding: 6px 10px;
+            cursor: pointer;
+          }
+        }
+        .comment-list-group{
+          margin-top: 20px;
+
+          ul .comment-list{
+                border-bottom: 1px #878787 solid;
+                padding-bottom: 20px;
+               .comments-info{
+                     overflow: hidden;
+                     padding: 10px 0;
+                     .avater{
+                       border-radius: 50%;
+                       height: 40px;
+                       float: left;
+                     }
+                     span{
+                       color: #878787;
+                     }
+                     .author{
+                       line-height: 40px;
+                       float: left;
+                       padding-left: 20px;
+                     }
+                     .pub-time{
+                       line-height: 40px;
+                       float:right;
+                     }
+
+
+
+
+
+            }
+               .comment-content{
+                 margin-left: 60px;
+               }
+          }
+        }
+      }
+    }
+  }
+}

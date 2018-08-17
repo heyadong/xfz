@@ -1,0 +1,84 @@
+@import "constant.scss";
+
+.auth-mask{
+  position: absolute;
+  top: 0;
+  bottom:0;
+  left: 0;
+  right: 0;
+  background: rgba(0,0,0,0.3);
+  overflow-y: scroll;// 超过边距上下滚动
+  .auth-group{
+    $Auth_Height:500px;
+    $Auth_Width:400px;
+    margin: 50px auto;
+    width: $Auth_Width;
+    height: $Auth_Height;
+    background: #fff;
+    overflow: hidden;
+    position: relative;
+
+    .sign-group{
+      overflow: hidden;
+      width: $Auth_Width*2;
+      height: 100%;
+      left:-$Auth_Width;
+      position: absolute;// 修改left值需要绝对定位
+      .auth-content{
+        width: $Auth_Width;
+        height: 100%;
+        float: left;
+        .icon{
+          padding: 10px 20px;//
+          position: relative;
+          .iconfont{
+            position: absolute;
+            right:10px;
+          }
+        }
+        .header-group{
+          overflow: hidden;
+          padding: 0 10px 20px 20px;
+          .header-content{
+            overflow: hidden;
+            padding: 10px 0;
+            border-bottom: 1px solid #ccc;
+            .title{
+              padding: 10px 0;
+            font-size: 18px;
+            float:left;
+            border-bottom:1px solid $Theme_Color;
+          }
+            .title-b{
+              padding: 10px;
+            float:right;
+            font-size:18px;
+          }
+          }
+        }
+        .form-group{
+          width:100%;
+          box-sizing: border-box;
+          padding: 20px;
+          .input-group{
+            padding-bottom: 10px;
+            .form-control{
+              width: 100%;
+              height: 40px;
+            }
+            .checkme{
+
+            }
+          }
+        }
+
+      }
+      .sign-in{
+
+      }
+      .sign-up{
+        background: #e63929;
+      }
+    }
+  }
+}

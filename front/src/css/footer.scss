@@ -1,0 +1,52 @@
+// 底部样式
+@import "constant.scss";
+@import "init.scss";
+
+.main{
+ .foot-warpper{
+        //position: fixed;
+        //bottom: 0;
+        //left:0;
+        //right:0;
+        margin-top: 30px;
+        .cooperation{
+            background:#2e2e2e ;
+            height:312px;
+            width: 100%;
+            .cp-dispaly{
+                width: $Page_Width;
+                margin: 0 auto;
+                p{
+                padding-top: 20px;
+                color: #fff;
+                font-size: 20px;
+                }
+                ul {
+                    overflow: hidden;
+                    li{
+                        float: left;
+                        margin:  15px;
+                        img{
+                            width: 80px;
+                            height: 30px;
+                        }
+                    }
+                }
+            }
+
+        }
+        .copyritght-group{
+            $Copyright_Height:83px;
+            background: #555555;
+            height: 83px;
+            width: 100%;
+            text-align: center;//
+            span{
+                display: block;
+                padding-top: 35px;
+            }
+        }
+    }
+  }
+
+

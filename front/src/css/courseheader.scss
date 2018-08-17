@@ -1,0 +1,52 @@
+@import "constant.scss";
+@import "init.scss";
+// course顶部导航条
+.courseheader{
+  height: 67px;
+  width: 100%;
+  margin-top: $Nav_Height;
+  background: white;
+  box-shadow: 0 6px 10px rgba(0,0,0,0.1);
+  .title-group{
+    width: $Page_Width;
+    height: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    .title a{
+      color: #696969;
+      font-size: 24px;
+      float: left;
+      line-height: 67px;
+
+    }
+    .course-categpry{
+        float: left;
+        overflow: hidden;
+        li{
+          float: left;
+          padding-left: 80px;
+          &.active{
+            a{
+              font-weight: bolder;
+              font-size: 16px;
+              color: #212121;
+            }
+          }
+          a{
+            line-height: 67px;
+            color: #888888;
+            &:hover{
+                color: $Theme_Color;
+            }
+          }
+        }
+      }
+    .mycourse{
+      float: right;
+      a{
+        line-height: 67px;
+        color: #888888;
+      }
+    }
+  }
+}

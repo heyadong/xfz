@@ -1,0 +1,466 @@
+@import "constant.scss";
+@import "init.scss";
+body {
+    background: #f2f2f2;//背景色
+}
+.header{
+    width:100%;
+    height: $Nav_Height;
+    background: #3a3a3a;
+    position: fixed; //固定导航条在顶部
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 100;
+
+    .container{
+        //z-index: 200;
+        width: $Page_Width;
+        height: 100%;
+        //background: yellow;
+        margin: 0 auto;
+        overflow: hidden;
+        .logo{
+            margin-top: 10px;
+            float: left;
+            height:48px;
+            width: 150px;
+            background-repeat: no-repeat;
+            background-image: url("https://www.bufanbiz.com/static/build/images/new-normal-logo.png");
+
+        }
+        // 导航条分类css
+        .top_catogery{
+            float: left;
+            ul{
+                margin-left: 40px;
+                li{
+                    margin-left: 40px;
+                    float: left;
+                    height: 61px;//
+                    cursor: pointer;
+
+                    a{
+                        font-size: 18px;
+                        color: #ffffff;
+                        line-height: $Nav_Height;
+                    }
+
+
+                }
+                .active{
+                    border-bottom: 3px solid $Theme_Color;
+                }
+            }
+        }
+        .auth-group{
+            float: right;
+            line-height:$Nav_Height;
+
+            .icon-content{
+                color: white;
+                font-size: 16px;
+                cursor: pointer;
+            }
+        }
+
+    }
+}
+.main{
+    width:100%;
+    margin-top: $Nav_Height+20px;
+
+    .wrapper{
+        width: $Page_Width;
+        margin: 0 auto; //盒子居中
+        overflow: hidden;//如果父盒子下面的div全浮动。父盒子将获取不到高度
+
+        .news-wrapper{
+            $Banner_width:$MainBox;
+            $Banner_height:202px;
+            float:left;
+            width:$Banner_width;
+
+
+            //轮播图css
+            .banner-group{
+                width: 100%;
+                height: $Banner_height;
+                background: deeppink;
+                position: relative;
+                overflow: hidden;//超过盒子大小部分隐藏.
+                .banner-ul{
+                    overflow: hidden;
+                    width: $Banner_width*4;
+                    position: absolute; // 绝对定位如果需要参考上级元素，需要设定上级元素的postion为relative
+
+                    li{
+                        float: left; // li 标签浮动
+                        width: $Banner_width;
+                        height: $Banner_height;
+
+                       img{
+                            width: $Banner_width;
+                            height: $Banner_height;
+                        }
+                    }
+
+                }
+                .arrow{
+                    font-size: 45px;
+                    color: #fff;
+                    position: absolute;
+                    top:50%;
+                    margin-top: -40px;
+                    display:none;
+                    cursor:pointer;// 鼠标移动怎加小手样式
+
+                }
+                .left-arrow{
+                    left:10px;
+                }
+                .right-arrow{
+                    right: 10px;
+                }
+                .dots{
+                    position: absolute;
+                    bottom: 6px;
+                    overflow: hidden;
+                    left:40%;
+
+                    .dot{
+                        width: 8px;
+                        height: 8px;
+                        border: 2px solid #ffffff;
+                        float:left;
+                        border-radius: 50%;
+                        margin: 0 8px;  //设置外边距
+                        cursor: pointer;
+                    }
+                    .active{
+                        background: white;
+                    }
+
+                }
+
+
+            }
+            // 新闻分类css
+            .news-list{
+                background: white;
+
+                .list-tab{
+                    // ul 标签样式
+                    overflow: hidden;
+                    margin-top: 10px;
+                    border: #eee 1px solid;
+                    border-right: 0;
+                    border-left: 0;
+                    height: 66px;
+
+
+                    li{
+                        float: left;
+                        //border: 1px solid;
+                        padding-left: 10px;
+                        line-height: 66px;
+
+                        a{
+                            color: gray;
+
+                        }
+                        &：first-of-type {
+
+                        }
+                        &.active{
+                            a{
+                                // a标签的样式
+                                border-left: $Theme_Color 3px solid;
+                                padding-left: 10px;
+                                line-height: 40px;
+                            }
+                        }
+
+                    }
+
+                }
+            }
+            .loadmore{
+                margin-top: 26px;
+                text-align: center;
+
+
+                .morebutton{
+                    //加载更多按钮样式
+                    height: 52px;
+                    width: 501px;
+                    color: $Theme_Color;
+                    outline:none;
+                    border: none;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .siderbar-wrapper{
+            // 右侧边栏样式
+            float: right;
+            width: 356px;
+            background: #ffffff;
+            // 广告宣传样式
+            .commercial{
+                .title-group {
+                    padding: 20px;
+                    overflow: hidden;
+                    .title {
+                        float: left;
+                        font-size: 18px;
+                    }
+                    .more {
+                        float: right;
+                        color: #878787;
+                        font-size: 18px;
+
+                    }
+                }
+                .ad-image{
+                    img{
+                        width: 100%;
+                    }
+                }
+
+            }
+            // 社交媒体关注
+            .foucs-group{
+                overflow: hidden;
+                .title-group {
+                    padding: 20px;
+                    overflow: hidden;
+                    .title {
+                        float: left;
+                        font-size: 18px;
+                    }
+                    .more {
+                        float: right;
+                        color: #878787;
+                        font-size: 18px;
+
+                    }
+                }
+                .content-group{
+                    float:left;
+                    li{
+                        margin: 20px 0;
+                        margin-left: 10px;
+                        background-image:url("https://www.bufanbiz.com/static/build/images/side-icon.png");
+                        background-repeat: no-repeat;
+                        background-size:34%; // 设置背景图片缩放大小
+                        height: 45px;
+                        padding-left: 60px;
+
+                        a{
+                            line-height: 45px;
+                        }
+                    }
+                    // 背景图片展示位置修改
+                    .zhihu{
+                        background-position: 0 0;
+                    }
+                    .weibo{
+                        background-position: 0 -54px; //标签样式
+                    }
+                    .toutiao{
+                        background-position: 0 -108px;
+                    }
+                }
+                .qrcode{
+                    float: right;
+                    margin-top: 20px;
+                    margin-right: 20px;
+                    width: 96px;
+                    height:153px;
+                    text-align: center;
+                    font-size: 12px;
+
+                    .qrcode-image{
+                        margin-top: 5px;
+                        height: 95px;
+                        width: 95px;
+                        background-size:100% 100%;
+                        background-image:url("https://www.bufanbiz.com/static/build/images/footer-wx-share.png");
+
+                    }
+                    span{
+                        color: #878787;
+                    }
+                }
+            }
+            // 热门报道推荐.
+            .hotnews{
+                .title-group{
+                    font-size: 18px;
+                    padding: 20px;
+                }
+                .hotnews-warpper{
+
+                    li{
+                        padding: 20px 0 20px 20px;
+                        overflow: hidden;
+                        border-bottom: 1px solid #878787;
+                        .left-group{
+                            width: 204px;
+                            height: 75px;
+                            float: left;
+                            position: relative;
+                            .red-content{
+                                 &:hover{
+                                    color: $Theme_Color;
+                                }
+                            }
+                            .more{
+                                position: absolute;
+                                left: 0;
+                                right: 0;
+                                bottom: 0;
+
+                                .category{
+                                    color: #878787;
+                                    font-size: 12px;
+                                    float: left;
+                                }
+                                .time{
+                                    float: right;
+                                    color: #878787;
+                                    font-size: 12px;
+                                }
+                            }
+                        }
+                        .rights-group{
+                            float: right;
+                            height: 72px;
+                            width: 101px;
+                            img{
+                                //设置图片高度
+                                width: 100%;
+                                height: 100%;
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+}
+// 新闻列表样式
+.main{
+    .wrapper{
+        .news-wrapper{
+            .news-list{
+                .news-group{
+                    li{
+                        padding: 14px;
+                        overflow: hidden;
+                        border-bottom: 2px solid  #eee ;
+                        .thumbnial-group{
+                            height:162px;
+                            width:226px;
+                            float: left;
+                            a image{
+                                width: 100%;
+                                height:100%;
+                            }
+                        }
+                        .news-info{
+                            float: right;
+                            height:162px;
+                            width:504px;
+                            position: relative; // span 标签绝对定位
+
+                            .title{
+                                font-size: 22px;
+                                a{
+                                    color:#212121;
+                                    &:hover{
+                                        color: $Theme_Color;
+                                    }
+                                }
+                            }
+                            .info{
+                                color: #878787;
+                                font-size: 14px;
+                            }
+                            .more{
+                                position: absolute;
+                                bottom: 0;
+                                left:0;
+                                right:0;
+                                font-size: 14px;
+                                color: #878787;
+                                .category{
+                                    float: left;
+                                }
+                                .pub-author{
+                                    float: right;
+
+                                }
+                                .pub-time{
+                                    float:right;
+                                    padding-left: 8px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+
+            }
+
+        }
+    }
+}
+// 底部样式
+.main{
+    .foot-warpper{
+        //position: fixed;
+        margin-top: 30px;
+        .cooperation{
+
+            background:#2e2e2e ;
+            height:312px;
+            width: 100%;
+            .cp-dispaly{
+                width: $Page_Width;
+                margin: 0 auto;
+                p{
+                padding-top: 20px;
+                color: #fff;
+                font-size: 20px;
+                }
+                ul {
+                    overflow: hidden;
+                    li{
+                        float: left;
+                        margin:  15px;
+                        img{
+                            width: 80px;
+                            height: 30px;
+                        }
+                    }
+                }
+            }
+
+        }
+        .copyritght-group{
+            $Copyright_Height:83px;
+            background: #555555;
+            height: 83px;
+            width: 100%;
+            text-align: center;//
+            span{
+                display: block;
+                padding-top: 35px;
+            }
+        }
+    }
+}

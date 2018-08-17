@@ -1,0 +1,155 @@
+@import "init.scss";
+@import "constant.scss";
+// 右侧导航
+.main{
+  .wrapper{
+      .siderbar-wrapper{
+            // 右侧边栏样式
+            float: right;
+            width: 356px;
+            background: #ffffff;
+            // 广告宣传样式
+            .commercial{
+                .title-group {
+                    padding: 20px;
+                    overflow: hidden;
+                    .title {
+                        float: left;
+                        font-size: 18px;
+                    }
+                    .more {
+                        float: right;
+                        color: #878787;
+                        font-size: 18px;
+
+                    }
+                }
+                .ad-image{
+                    img{
+                        width: 100%;
+                    }
+                }
+
+            }
+            // 社交媒体关注
+            .foucs-group{
+                overflow: hidden;
+                .title-group {
+                    padding: 20px;
+                    overflow: hidden;
+                    .title {
+                        float: left;
+                        font-size: 18px;
+                    }
+                    .more {
+                        float: right;
+                        color: #878787;
+                        font-size: 18px;
+
+                    }
+                }
+                .content-group{
+                    float:left;
+                    li{
+                        margin: 20px 0;
+                        margin-left: 10px;
+                        background-image:url("https://www.bufanbiz.com/static/build/images/side-icon.png");
+                        background-repeat: no-repeat;
+                        background-size:34%; // 设置背景图片缩放大小
+                        height: 45px;
+                        padding-left: 60px;
+
+                        a{
+                            line-height: 45px;
+                        }
+                    }
+                    // 背景图片展示位置修改
+                    .zhihu{
+                        background-position: 0 0;
+                    }
+                    .weibo{
+                        background-position: 0 -54px; //标签样式
+                    }
+                    .toutiao{
+                        background-position: 0 -108px;
+                    }
+                }
+                .qrcode{
+                    float: right;
+                    margin-top: 20px;
+                    margin-right: 20px;
+                    width: 96px;
+                    height:153px;
+                    text-align: center;
+                    font-size: 12px;
+
+                    .qrcode-image{
+                        margin-top: 5px;
+                        height: 95px;
+                        width: 95px;
+                        background-size:100% 100%;
+                        background-image:url("https://www.bufanbiz.com/static/build/images/footer-wx-share.png");
+
+                    }
+                    span{
+                        color: #878787;
+                    }
+                }
+            }
+            // 热门报道推荐.
+            .hotnews{
+                .title-group{
+                    font-size: 18px;
+                    padding: 20px;
+                }
+                .hotnews-warpper{
+
+                    li{
+                        padding: 20px 0 20px 20px;
+                        overflow: hidden;
+                        border-bottom: 1px solid #878787;
+                        .left-group{
+                            width: 204px;
+                            height: 75px;
+                            float: left;
+                            position: relative;
+                            .red-content{
+                                 &:hover{
+                                    color: $Theme_Color;
+                                }
+                            }
+                            .more{
+                                position: absolute;
+                                left: 0;
+                                right: 0;
+                                bottom: 0;
+
+                                .category{
+                                    color: #878787;
+                                    font-size: 12px;
+                                    float: left;
+                                }
+                                .time{
+                                    float: right;
+                                    color: #878787;
+                                    font-size: 12px;
+                                }
+                            }
+                        }
+                        .rights-group{
+                            float: right;
+                            height: 72px;
+                            width: 101px;
+                            img{
+                                //设置图片高度
+                                width: 100%;
+                                height: 100%;
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+  }
+}
