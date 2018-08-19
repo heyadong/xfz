@@ -27,7 +27,7 @@
          * npm install package -g \# 全局安装 （全局安装后可以在cmd使用命令）
          * npm update package 更新包
          * npm install -g cnpm --registry=https://registry.npm.taobao.org  使用cnpm 安装管理包 
-         * npm init 初始化项目 并生成一个package.json 文件记录项目的依赖包  
+         * npm init 初始化项目 并生成一个package.json 文件记录项目的依赖包
     3. gulp 的安装  
        创建项目文件夹 使用npm init 初始化项目：
        * 使用npm install gulp -g 安装全局的gulp包  
