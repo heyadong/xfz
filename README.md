@@ -19,7 +19,7 @@
          ``` 
          nvm npm_mirror https://npm.taobao.org/mirrors/npm/
          ```  
-    2. node.js 下载  
+   2. node.js 下载  
       安装nvm 后使用 nvm install 6.4.0 命令安装，这里我们使用6.4版本的node。  
       安装完node后 就可以使用npm(node package manager) 命令了.
       npm常见命令：  
@@ -30,7 +30,7 @@
          * npm init 初始化项目 并生成一个package.json 文件记录项目的依赖包 
          
          
-    3. gulp 的安装  
+   3. gulp 的安装  
        创建项目文件夹 使用npm init 初始化项目：
        * 使用npm install gulp -g 安装全局的gulp包  
        * 使用 npm install gulp --save-dev 本地安装 (--save-dev命令会将项目的安装包记录在package.json文件中)
