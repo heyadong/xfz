@@ -32,8 +32,17 @@
          
    3. gulp 的安装  
        创建项目文件夹 使用npm init 初始化项目：
-       * 使用npm install gulp -g 安装全局的gulp包  
+       * 使用 npm install gulp -g 安装全局的gulp包  
        * 使用 npm install gulp --save-dev 本地安装 (--save-dev命令会将项目的安装包记录在package.json文件中)
+       * 安装 gulp(gulp-cssnano(css压缩),gulp-uglyfiy(js压缩）,gulp-imagemin(图片压缩),gulp-sass(sass转css),gulp-rename,gulp-cache
+       
+       
+   4. 编写gulpfile.js 文件
+       var gulp = require('gulp')
+       gulp.task('css',
+   
+   
+   
        
       
        
