@@ -1,4 +1,5 @@
 ### 这是一个仿不凡商业的前端项目
+
 完成这个项目主要用到的工具有：
    1. NVM(node 版本管理/NPM
    2. 构建工具 gulp(gulp-cssnano(css压缩),gulp-uglyfiy(js压缩）,gulp-imagemin(图片压缩),gulp-sass(sass转css),gulp-rename,gulp-cache)
@@ -38,8 +39,21 @@
        
        
    4. 编写gulpfile.js 文件
-       var gulp = require('gulp')
-       gulp.task('css',
+   
+     ``` javascript
+         var gulp = require('gulp')
+         var sass = requilre('gulp-sass')
+         var rename = require('gulp-rename')
+         var bs = require('browser-sync')
+         gulp.task('css', function(){ // 创建css任务
+             gulp.src('example.scss')  // 获取路径文件
+             .pipe(sass().on('error',sass.logError)) // scss 转 css
+             .pipe(cssnano()) // 压缩css文件
+             .pipe(rename({'suffix':'.min'})  //重命名并添加.min 后缀
+             .pipe(gulp.dest('dist/css/)) // 将压缩后的css文件保存在dist/css路径下
+             .pipe(bs.stream()) //推流
+         }
+     ```
    
    
    
