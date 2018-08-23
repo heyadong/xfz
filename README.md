@@ -5,6 +5,13 @@
    2. 构建工具 gulp(gulp-cssnano(css压缩),gulp-uglyfiy(js压缩）,gulp-imagemin(图片压缩),gulp-sass(sass转css),gulp-rename,gulp-cache)
    3. node.js browser-sync库
    
+  **项目截图**
+  ![首页](https://github.com/heyadong/xfz/blob/master/index.png)
+  ![咨询详情页](https://github.com/heyadong/xfz/blob/master/news_detail.png)
+  ![在线课堂页](https://github.com/heyadong/xfz/blob/master/live-course.png)
+  ![视频详情页](https://github.com/heyadong/xfz/blob/master/course-detai%3B.png)
+  
+  
   **准备工作**
   1. nvm下载  
       nvm(node version manager) windows下载链接：[https://github.com/coreybutler/nvm-windows/releases]，
